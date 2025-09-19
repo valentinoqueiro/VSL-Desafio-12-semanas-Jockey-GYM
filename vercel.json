@@ -1,5 +1,4 @@
-{
-  "cleanUrls": true,
+{ "cleanUrls": true,
   "routes": [
     { "src": "^/$", "dest": "/VSL/index.html" },
     { "src": "^/typ1$", "dest": "/TYP1/index.html" },
