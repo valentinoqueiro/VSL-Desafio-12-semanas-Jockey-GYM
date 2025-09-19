@@ -162,32 +162,31 @@
   /* util */
   .visually-hidden{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
   
-/* contenedor centrado */
+/* Contenedor centrado */
 .video__frame {
-  max-width: 720px;   /* ancho máximo en desktop */
+  max-width: 720px;      /* ancho máximo en desktop */
   margin: 0 auto;
+  padding: 16px;
 }
 
-/* video responsivo */
+/* Video responsivo */
 .video__el {
   display: block;
   width: 100%;
-  height: auto;           /* mantiene proporción si es horizontal */
-  max-height: 90vh;       /* no más alto que la pantalla */
-  border-radius: 12px;
+  height: auto;          /* mantiene proporción si es horizontal */
+  max-height: 90vh;      /* nunca más alto que la pantalla */
+  border-radius: 12px;   /* opcional, bordes redondeados */
   background: #000;
+  object-fit: contain;   /* mantiene el video completo visible */
 }
 
-/* si el video es vertical (9:16), fuerza marco alto pero controlado */
-@supports (aspect-ratio: 1) {
-  .video__el {
-    aspect-ratio: 9 / 16; /* ajusta si tu video es vertical */
-    object-fit: cover;     /* o 'contain' si querés ver todo con barras */
-  }
-}
-
-/* en móviles permite ancho completo sin exceder alto */
+/* Para móviles */
 @media (max-width: 768px) {
-  .video__frame { max-width: 100%; padding: 0 16px; }
-  .video__el { max-height: 75vh; }
+  .video__frame {
+    max-width: 100%;
+    padding: 8px;
+  }
+  .video__el {
+    max-height: 70vh;   /* un poco más chico en celular */
+  }
 }
