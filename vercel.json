@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/VSL/index.html" },
+    { "source": "/typ1", "destination": "/TYP1/index.html" },
+    { "source": "/typ2", "destination": "/TYP2/index.html" }
+  ]
+}
