@@ -1,7 +1,16 @@
 {
-  "routes": [
-    { "src": "^/$", "dest": "/VSL/index.html" },
-    { "src": "^/typ1$", "dest": "/TYP1/index.html" },
-    { "src": "^/typ2$", "dest": "/TYP2/index.html" }
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/VSL/VSL.html", "destination": "/VSL/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/",       "destination": "/VSL/index.html" },
+    { "source": "/VSL",    "destination": "/VSL/index.html" },
+
+    { "source": "/TYP1",   "destination": "/TYP1/index.html" },
+    { "source": "/TYP2",   "destination": "/TYP2/index.html" },
+
+    { "source": "/typ1",   "destination": "/TYP1/index.html" },
+    { "source": "/typ2",   "destination": "/TYP2/index.html" }
   ]
 }
